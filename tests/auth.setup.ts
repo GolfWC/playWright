@@ -1,6 +1,6 @@
 import { test as setup, expect } from '@playwright/test';
-import { Login } from '../page-objects/login';
-import { Main } from '../page-objects/main';
+import { Login } from '../page-objects/loginPage'; // Ensure this path is correct and the file exists
+import { Main } from '../page-objects/mainPage'; // Ensure this path is correct and the file exists
 
 const authFile = 'playwright/.auth/user.json';
 const users = JSON.parse(JSON.stringify(require("../test-data/users.json")));

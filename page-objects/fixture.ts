@@ -1,12 +1,12 @@
 import { test as base } from '@playwright/test';
-import { Login } from './login';
-import { Main } from './main';
-import { Manage } from './manage';
-import { Search } from './search';
-import { Traveler } from './traveler';
-import { Monitor } from './monitor';
-import { Manifest } from './manifest';
-import { Report } from './report';
+import { Login } from './loginPage';
+import { Main } from './mainPage';
+import { Manage } from './managePage';
+import { Search } from './searchPage';
+import { Traveler } from './travelerPage';
+import { Monitor } from './monitorPage';
+import { Manifest } from './manifestPage';
+import { Report } from './reportPage';
 
 type MyFixtures = {
     login: Login;

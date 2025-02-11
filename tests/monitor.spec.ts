@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
-import { Login } from '../page-objects/login';
-import { Main } from '../page-objects/main';
+import { Login } from '../page-objects/loginPage';
+import { Main } from '../page-objects/mainPage';
 //import { ApisSearch } from '../page-objects/apis-search';
 
 test.describe('monitor tab', () => {

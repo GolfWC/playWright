@@ -1,9 +1,9 @@
 import { test, expect } from '@playwright/test';
-import { Login } from '../page-objects/login';
-import { Main } from '../page-objects/main';
-import { Search } from '../page-objects/search';
-import { Traveler } from '../page-objects/traveler';
-import { Manage } from '../page-objects/manage';
+import { Login } from '../page-objects/loginPage';
+import { Main } from '../page-objects/mainPage';
+import { Search } from '../page-objects/searchPage';
+import { Traveler } from '../page-objects/travelerPage';
+import { Manage } from '../page-objects/managePage';
 
 test.describe('provider', () => { 
     let login;

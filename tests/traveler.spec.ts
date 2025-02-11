@@ -1,8 +1,8 @@
 import { test, expect } from '@playwright/test';
-import { Login } from '../page-objects/login';
-import { Main } from '../page-objects/main';
-import { Search } from '../page-objects/search';
-import { Traveler } from '../page-objects/traveler';
+import { Login } from '../page-objects/loginPage';
+import { Main } from '../page-objects/mainPage';
+import { Search } from '../page-objects/searchPage';
+import { Traveler } from '../page-objects/travelerPage';
 
 test.describe('traveler explorer', () => { 
     let login;

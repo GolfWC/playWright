@@ -1,5 +1,5 @@
 import { test, expect } from '../page-objects/fixture';
-import { Search } from '../page-objects/search';
+import { Search } from '../page-objects/searchPage';
 
 test.describe('interpol', () => { 
 
