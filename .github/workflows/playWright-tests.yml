@@ -35,3 +35,11 @@ jobs:
         with:
           name: playwright-report
           path: playwright-report
+
+      - name: Notify Microsoft Teams
+        if: always()
+        run: |
+          WEBHOOK_URL=${{ secrets.TEAMS_WEBHOOK_URL }}
+          STATUS="Playwright tests have completed. See the report."
+          PAYLOAD=$(jq -n --arg status "$STATUS" '{text: $status}')
+          curl -H "Content-Type: application/json" -d "$PAYLOAD" "$WEBHOOK_URL"
