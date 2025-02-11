@@ -28,6 +28,7 @@ jobs:
         run: |
           set -e
           npx playwright test
+          
 
       - name: Always upload Playwright report
         if: always()
