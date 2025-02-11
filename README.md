@@ -28,7 +28,13 @@ Run your tests as usual, and the custom reporter will send notifications to your
 npx playwright test
 ```
 
+Step 6 
+If you are facing an error on  require('dotenv').config(); please run below comand.
 
+```
+npm install dotenv
+
+```
 
 
 
