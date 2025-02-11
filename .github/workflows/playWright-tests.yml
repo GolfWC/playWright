@@ -25,12 +25,10 @@ jobs:
         run: npm install
 
       - name: Run Playwright tests
-        run: |
-          set -e
-          npx playwright test
+        run: npx playwright test
 
-      - name: Upload Playwright report
-        if: failure()
+      - name: Always upload Playwright report
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: playwright-report
