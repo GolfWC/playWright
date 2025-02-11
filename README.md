@@ -35,6 +35,13 @@ If you are facing an error on  require('dotenv').config(); please run below coma
 npm install dotenv
 
 ```
+### To Sent an Email notification
+o send the test results and report via email, you can use a Node.js package like nodemailer to send emails. You can create a custom reporter that sends the email after the tests are completed. Here is an example of how you can achieve this:
+
+Install nodemailer:
+```
+npm install nodemailer
+```
 
 
 
