@@ -42,6 +42,6 @@ jobs:
         run: |
           WEBHOOK_URL=${{ secrets.TEAMS_WEBHOOK_URL }}
           STATUS="Playwright tests have completed. See the report."
-          RUN_URL="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          RUN_URL=${{ env.RUN_URL }}
           PAYLOAD=$(jq -n --arg status "$STATUS" --arg run_url "$RUN_URL" '{text: "\($status)\nRun URL: \($run_url)"}')
           curl -H "Content-Type: application/json" -d "$PAYLOAD" "$WEBHOOK_URL"
