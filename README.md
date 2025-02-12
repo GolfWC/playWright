@@ -1,5 +1,11 @@
 ## Automation With PlayWright with TypeScript 
 
+To Update Playwright: Ensure that you are using the latest version of Playwright, as updates may contain bug fixes and improvements.
+
+```
+npm install @playwright/test@latest
+```
+
 To integrate team notifications for test results in your Playwright framework, you can use a combination of Playwright's built-in reporters and external notification services like Slack, Microsoft Teams, or email. Here is an example of how you can set up notifications using a custom reporter and a Slack webhook.
 
 Step 1: Install Required Packages
@@ -34,6 +40,13 @@ If you are facing an error on  require('dotenv').config(); please run below coma
 ```
 npm install dotenv
 
+```
+### To Sent an Email notification
+o send the test results and report via email, you can use a Node.js package like nodemailer to send emails. You can create a custom reporter that sends the email after the tests are completed. Here is an example of how you can achieve this:
+
+Install nodemailer:
+```
+npm install nodemailer
 ```
 
 

@@ -32,21 +32,21 @@ jobs:
 
       - name: Always upload Playwright report
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v2
         with:
           name: playwright-report
           path: playwright-report
 
-      - name: Get Playwright report URL
+      - name: Set Artifact URL
         if: always()
-        id: get-report-url
-        run: echo "REPORT_URL=${{ steps.upload-playwright-report.outputs.download-url }}" >> $GITHUB_ENV
+        id: set-artifact-url
+        run: echo "ARTIFACT_URL=${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}#artifacts" >> $GITHUB_ENV
+
 
       - name: Notify Microsoft Teams
         if: always()
         run: |
           WEBHOOK_URL=${{ secrets.TEAMS_WEBHOOK_URL }}
-          STATUS="Playwright tests have completed. See the report."
-          REPORT_URL=${{ env.REPORT_URL }}
-          PAYLOAD=$(jq -n --arg status "$STATUS" --arg report_url "$REPORT_URL" '{text: "\($status)\nReport: \($report_url)"}')
-          curl -H "Content-Type: application/json" -d "$PAYLOAD" "$WEBHOOK_URL"
+          STATUS="Playwright tests have completed. See the report.
+          ARTIFACT_URL=${{ env.ARTIFACT_URL }}
+          PAYLOAD=$(jq -n --arg status "$STATUS" --arg artifact_url "$ARTIFACT_URL" '{text: "\($status)\nArtifact URL: \($artifact_url)"}')
