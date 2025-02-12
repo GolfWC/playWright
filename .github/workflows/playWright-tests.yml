@@ -42,11 +42,11 @@ jobs:
         id: set-artifact-url
         run: echo "ARTIFACT_URL=${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}#artifacts" >> $GITHUB_ENV
 
+
       - name: Notify Microsoft Teams
         if: always()
         run: |
           WEBHOOK_URL=${{ secrets.TEAMS_WEBHOOK_URL }}
-          STATUS="Playwright tests have completed. See the report."
+          STATUS="Playwright tests have completed. See the report.
           ARTIFACT_URL=${{ env.ARTIFACT_URL }}
           PAYLOAD=$(jq -n --arg status "$STATUS" --arg artifact_url "$ARTIFACT_URL" '{text: "\($status)\nArtifact URL: \($artifact_url)"}')
-          curl -H "Content-Type: application/json" -d "$PAYLOAD" "$WEBHOOK_URL"
