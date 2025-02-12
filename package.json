@@ -14,6 +14,7 @@
     "@types/node": "^20.12.12"
   },
   "dependencies": {
+    "@estruyf/github-actions-reporter": "^1.10.0",
     "axios": "^1.7.9",
     "dotenv": "^16.4.7"
   }

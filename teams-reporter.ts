@@ -65,9 +65,8 @@ class TeamsReporter implements Reporter {
   }
 
   async onEnd(result: { status: string }) {
-    const reportUrl = process.env.REPORT_URL || 'Report URL not available';
     const message = {
-      text: `Playwright Test Results: ${result.status}\nPassed: ${this.passedTests}\nFailed: ${this.failedTests}\nReport: ${reportUrl}`,
+      text: `Playwright Test Results: ${result.status}\nPassed: ${this.passedTests}\nFailed: ${this.failedTests}`,
     };
     console.log(`Sending end message: ${JSON.stringify(message)}`);
     try {
