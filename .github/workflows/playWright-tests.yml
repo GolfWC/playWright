@@ -42,6 +42,6 @@ jobs:
         run: |
           WEBHOOK_URL=${{ secrets.TEAMS_WEBHOOK_URL }}
           STATUS="Playwright tests have completed. See the report."
-          ARTIFACT_URL="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}#artifacts"
-          PAYLOAD=$(jq -n --arg status "$STATUS" --arg artifact_url "$ARTIFACT_URL" '{text: "\($status)\nReport: \($artifact_url)"}')
+          RUN_URL="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          PAYLOAD=$(jq -n --arg status "$STATUS" --arg run_url "$RUN_URL" '{text: "\($status)\nRun URL: \($run_url)"}')
           curl -H "Content-Type: application/json" -d "$PAYLOAD" "$WEBHOOK_URL"
