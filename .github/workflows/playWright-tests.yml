@@ -29,7 +29,7 @@ jobs:
         run: npm install
 
       - name: Run Playwright tests
-        run: xvfb-run npx playwright test
+        run: xvfb-run npx playwright test --reporter=list,json=playwright-report/results.json
 
       - name: Always upload Playwright report
         if: always()
