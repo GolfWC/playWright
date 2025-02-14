@@ -5,7 +5,7 @@
    
   
 
-   ## [Documentation](https://playwright.dev) | [API reference](https://playwright.dev/docs/api/class-playwright)
+   ##  ...... [Documentation](https://playwright.dev) | [API reference](https://playwright.dev/docs/api/class-playwright)
 
 
    This repository contains a Playwright test automation framework for end-to-end testing of web applications. The framework is configured to run tests in parallel, capture screenshots and videos on failure, and report test results to Microsoft Teams.
