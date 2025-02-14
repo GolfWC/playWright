@@ -15,6 +15,14 @@ To check if Node js is installed in your sysytem
   ```
   npm node-v
   ```
+
+  ## Project Setup
+
+1. **Clone the Repository**
+
+   ```sh
+   git clone <repository-url>
+   cd playWrightAzureProject
   
 To Update Playwright: Ensure that you are using the latest version of Playwright, as updates may contain bug fixes and improvements.
 
