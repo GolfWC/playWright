@@ -1,4 +1,4 @@
-## Automation With PlayWright  🎭 with TypeScript ![Windows11onReactGIF](https://github.com/user-attachments/assets/8035f233-e943-452e-b992-2e455e9dfb16) <img src="https://github.com/user-attachments/assets/8035f233-e943-452e-b992-2e455e9dfb16" alt="Windows11onReactGIF" width="100" height="100">
+## Automation With PlayWright  🎭 with TypeScript <img src="https://github.com/user-attachments/assets/8035f233-e943-452e-b992-2e455e9dfb16" alt="Windows11onReactGIF" width="100" height="100">
 
   This repository contains a Playwright test automation framework for end-to-end testing of web applications. The framework is configured to run tests in parallel, capture screenshots and videos on failure, and report test results to Microsoft Teams.
 
