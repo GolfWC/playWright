@@ -21,10 +21,10 @@ To check if Node js is installed in your sysytem
 1. **Clone the Repository**
 
    ```sh
-   git clone <repository-url>
+   git clone https://github.com/GolfWC/playWright.git
    cd playWrightAzureProject
   
-To Update Playwright: Ensure that you are using the latest version of Playwright, as updates may contain bug fixes and improvements.
+2.Install Playwright,or Update PlayWright: Ensure that you are using the latest version of Playwright, as updates may contain bug fixes and improvements.
 
 ```
 npm install @playwright/test@latest
