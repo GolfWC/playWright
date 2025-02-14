@@ -9,7 +9,12 @@
 ## Prerequisites⚠️⚠️⚠️
 
 - Node.js (version 16.x or later)
+- VS code studio
 - npm (Node Package Manager)
+To check if Node js is installed in your sysytem 
+  ```
+  npm node-v
+  ```
   
 To Update Playwright: Ensure that you are using the latest version of Playwright, as updates may contain bug fixes and improvements.
 
