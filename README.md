@@ -23,12 +23,14 @@ To check if Node js is installed in your sysytem
    ```sh
    git clone https://github.com/GolfWC/playWright.git
    cd playWrightAzureProject
-  
-2.Install Playwright,or Update PlayWright: Ensure that you are using the latest version of Playwright, as updates may contain bug fixes and improvements.
+2. Install Playwright,or Update PlayWright: Ensure that you are using the latest version of Playwright, as updates may contain bug fixes and improvements.
 
-```
-npm install @playwright/test@latest
-```
+   ```
+   npm install @playwright/test@latest
+   ```
+
+
+## How to integrate to MicroSoft Team Notification <img src="[https://github.com/user-attachments/assets/8035f233-e943-452e-b992-2e455e9dfb16](https://github.com/user-attachments/assets/1c024476-a669-4bdd-b319-a8b7a369cb8f)" alt="Windows11onReactGIF" width="50" height="50">
 
 To integrate team notifications for test results in your Playwright framework, you can use a combination of Playwright's built-in reporters and external notification services like Slack, Microsoft Teams, or email. Here is an example of how you can set up notifications using a custom reporter and a Slack webhook.
 
