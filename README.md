@@ -28,10 +28,10 @@ To check if Node js is installed in your sysytem
    ```
    npm install @playwright/test@latest
    ```
-![AhsokaGIF](https://github.com/user-attachments/assets/6217a60b-7b91-41a2-9f51-1f7fbd9a05a7)
 
 
-## How to integrate to MicroSoft Team Notification <img src="https://github.com/user-attachments/assets/6217a60b-7b91-41a2-9f51-1f7fbd9a05a7" alt="Windows11onReactGIF" width="300" height="200">
+
+<img src="https://github.com/user-attachments/assets/6217a60b-7b91-41a2-9f51-1f7fbd9a05a7" alt="Windows11onReactGIF" width="50" height="50"> ## How to integrate to MicroSoft Team Notification 
 
 To integrate team notifications for test results in your Playwright framework, you can use a combination of Playwright's built-in reporters and external notification services like Slack, Microsoft Teams, or email. Here is an example of how you can set up notifications using a custom reporter and a Slack webhook.
 
