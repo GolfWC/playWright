@@ -2,7 +2,7 @@
 
    This repository contains a Playwright test automation framework for end-to-end testing of web applications. The framework is configured to run tests in parallel, capture screenshots and videos on failure, and report test results to Microsoft Teams.
 
-## Prerequisites
+## Prerequisites⚠️⚠️⚠️
 
 - Node.js (version 16.x or later)
 - npm (Node Package Manager)
