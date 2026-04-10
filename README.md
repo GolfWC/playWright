@@ -1,8 +1,12 @@
 ## -------------- Automation With PlayWright   🎭 with TypeScript ------------- ##
 
- [![npm version](https://img.shields.io/npm/v/playwright.svg)](https://www.npmjs.com/package/playwright) <!-- GEN:chromium-version-badge -->[![Chromium version](https://img.shields.io/badge/chromium-134.0.6998.15-blue.svg?logo=google-chrome)](https://www.chromium.org/Home)<!-- GEN:stop --> <!-- GEN:firefox-version-badge -->[![Firefox version](https://img.shields.io/badge/firefox-135.0-blue.svg?logo=firefoxbrowser)](https://www.mozilla.org/en-US/firefox/new/)<!-- GEN:stop --> <!-- GEN:webkit-version-badge -->[![WebKit version](https://img.shields.io/badge/webkit-18.2-blue.svg?logo=safari)](https://webkit.org/)<!-- GEN:stop --> [![Join Discord](https://img.shields.io/badge/join-discord-infomational)](https://aka.ms/playwright/discord)</h1>
+ [![npm version](https://img.shields.io/npm/v/playwright.svg)](https://www.npmjs.com/package/playwright) <!-- GEN:chromium-version-badge -->[![Chromium version](https://img.shields.io/badge/chromium-134.0.6998.15-blue.svg?logo=google-chrome)](https://www.chromium.org/Home)<!-- GEN:stop --> <!-- GEN:firefox-version-badge -->[![Firefox version](https://img.shields.io/badge/firefox-135.0-blue.svg?logo=firefoxbrowser)](https://www.mozilla.org/en-US/firefox/new/)<!-- GEN:stop --> <!-- GEN:webkit-version-badge -->[![WebKit version](https://img.shields.io/badge/webkit-18.2-blue.svg?logo=safari)](https://webkit.org/)
+</h1>
 
-   
+
+
+   ##  [NextGen APIS UI Requirements](https://securiport.atlassian.net/wiki/spaces/PM/pages/3768877066/NextGen+APIS+Plus+UI+Requirements)  
+   ##  [Site Map and Navigation Menu](https://securiport.atlassian.net/wiki/spaces/PM/pages/3593371649/Site+Map+and+Navigation+Menu) 
   
 
    ##  [Documentation](https://playwright.dev) | [API reference](https://playwright.dev/docs/api/class-playwright)
@@ -38,8 +42,11 @@ To check if Node js is installed in your sysytem
    ```
    npm install @playwright/test@latest
    ```
+if you face an issue PSSecurityException. This is a PowerShell execution policy block on npm.ps1. run blelow comand on Powershell
 
-
+   ```
+   Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+   ```
 
  ## How to integrate to MicroSoft Team Notification        <img src="https://github.com/user-attachments/assets/6217a60b-7b91-41a2-9f51-1f7fbd9a05a7" alt="Windows11onReactGIF" width="70" height="30">
 
@@ -101,6 +108,19 @@ npm install nodemailer
 * [API reference](https://playwright.dev/docs/api/class-playwright/)
 * [Contribution guide](CONTRIBUTING.md)
 * [Changelog](https://github.com/microsoft/playwright/releases)
+
+
+npm install googleapis
+
+npm install --save-dev @types/googleapis
+
+
+command to run the test by Tags
+npx playwright test --grep "@smoke"
+npx playwright test --grep "@regression"
+npx playwright test --grep "@smoke.*@regression"
+npx playwright test src/tests/Manifest/UploadPAX_Inbound.spec.ts --workers=1
+npx playwright test "FAL6_Inbound_API" --repeat-each=10 --workers=1
 
 
 
