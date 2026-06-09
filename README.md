@@ -92,6 +92,56 @@ Install nodemailer:
 ```
 npm install nodemailer
 ```
+## SQL Server Access
+
+This framework can query SQL Server from Playwright tests by using the helper in [src/utils/sqlServer.ts](src/utils/sqlServer.ts).
+
+Install the driver:
+
+```sh
+npm install mssql --save
+```
+
+Set these environment variables in your `.env` file:
+
+```env
+ENV=QA
+QA_SQLSERVER_HOST=your-server-name
+QA_SQLSERVER_DATABASE=your-database-name
+QA_SQLSERVER_USER=your-user-name
+QA_SQLSERVER_PASSWORD=your-password
+SQLSERVER_PORT=1433
+SQLSERVER_ENCRYPT=true
+SQLSERVER_TRUST_SERVER_CERTIFICATE=true
+```
+
+Example usage:
+
+```ts
+import { querySqlServer } from '../../../utils/sqlServer';
+
+const rows = await querySqlServer<{ FlightNumber: string }>('SELECT TOP 1 FlightNumber FROM dbo.Flights');
+console.log(rows);
+```
+
+
+
+
+
+
+
+
+## Resources
+
+* [Documentation](https://playwright.dev)
+* [API reference](https://playwright.dev/docs/api/class-playwright/)
+* [Contribution guide](CONTRIBUTING.md)
+* [Changelog](https://github.com/microsoft/playwright/releases)
+
+
+npm install googleapis
+
+npm install --save-dev @types/googleapis
 
 
 
