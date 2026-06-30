@@ -174,3 +174,19 @@ npx playwright test "FAL6_Inbound_API" --repeat-each=10 --workers=1
 
 
 
+###### Postman token Respond
+pm.environment.unset("APIS_NET_CLIENT_TOKEN");
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+pm.test("Response time is less than 500ms", function () {
+    pm.expect(pm.response.responseTime).to.be.below(500);
+});
+const jsonData = pm.response.json();
+let cleanToken = jsonData.token.replace(/^Bearer\s/, "");
+pm.test("Access Token Received", function() {
+    pm.environment.set("APIS_NET_CLIENT_TOKEN", cleanToken);
+});
+console.log("APIS_NET_CLIENT_TOKEN = " + jsonData.token);
+
+
